@@ -1,21 +1,147 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: rgb(8, 0, 0);
+  font-family: Arial, sans-serif;
+  background-color: #fbfbfb;
+  color: #000000;
+  font-size: 25px;
+}
+
+.container {
+  width: 90%; /* Zmniejszona szerokość container */
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff00;
+  color: rgba(0, 0, 0, 0.986);
+}
+
+.add-job-btn {
+  background-color: #3d4246;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-btn {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.advanced-search {
+  position: relative;
+}
+
+.advanced-btn {
+  background-color: #005bb5;
+  color: white;
+  border: none;
+  padding: 10px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 10;
+}
+
+.advanced-search:hover .dropdown {
+  display: block;
+}
+
+.main-content {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(69, 8, 8, 0.1);
+  margin: 20px 0;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 0;
+  background-color: #0066cc;
+  color: white;
+}
+
+/* NEW STYLES FOR FILTER ROW */
+.filters-row {
+  display: flex; /* Użycie flexboxa dla rozmieszczenia w linii poziomej */
+  flex-wrap: wrap; /* Jeśli brakuje miejsca, przejdą do nowej linii */
+  gap: 20px; /* Odstęp pomiędzy filtrami */
+  justify-content: flex-start; /* Filtry są wyświetlane od lewej do prawej */
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.filter-dropdown {
+  width: 18%; /* Określamy szerokość każdego filtra */
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box; /* Zapewnia, że padding nie wpływa na szerokość elementu */
+}
+
+.filter-button {
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  background: #f0f0f0;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  margin-top: 10px;
+  display: block;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.dropdown-item {
+  margin-bottom: 10px;
 }

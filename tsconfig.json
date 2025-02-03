@@ -1,27 +1,33 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
+    "target": "ES2020",                          // Możesz wybrać nowszy standard ES
+    "lib": ["dom", "dom.iterable", "esnext"],     // Obsługuje najnowsze funkcje
+    "allowJs": true,                              // Pozwala na używanie JS razem z TS
+    "skipLibCheck": true,                         // Pomija sprawdzanie typów w bibliotekach
+    "strict": true,                               // Włącza tryb ścisłej weryfikacji
+    "strictNullChecks": true,                     // Wymusza bezpieczniejsze operacje z null/undefined
+    "noEmit": true,                               // Nie generuje plików JS (dla Next.js)
+    "esModuleInterop": true,                      // Obsługuje importy ES6 w CommonJS
+    "module": "esnext",                           // Używa najnowszego systemu modułów
+    "moduleResolution": "bundler",                // Domyślnie Next.js używa bundlera
+    "resolveJsonModule": true,                    // Pozwala na importowanie plików JSON
+    "isolatedModules": true,                      // Zapewnia kompatybilność z Next.js
+    "jsx": "preserve",                            // Zachowuje JSX (Next.js przetwarza JSX)
+    "incremental": true,                          // Umożliwia inkrementalną kompilację
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"]                          // Alias ścieżek dla folderu src
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts", 
+    "**/*.ts", 
+    "**/*.tsx", 
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }

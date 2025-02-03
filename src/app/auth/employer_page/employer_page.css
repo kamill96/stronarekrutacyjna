@@ -1,0 +1,83 @@
+/* Full centering of the registration form */
+.registration-container {
+    min-height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center; /* Centering horizontally */
+    align-items: center; /* Centering vertically */
+    background-color: #f3f4f6; /* Background color */
+  }
+  
+  /* Registration form styling */
+  .registration-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    width: 100%;
+    max-width: 400px; /* Max width of the form */
+    box-sizing: border-box;
+  }
+  
+  /* Title styling */
+  .form-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Error message styling */
+  .text-red-500 {
+    color: #f87171;
+    font-size: 0.875rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  /* Input styling */
+  .form-input {
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  /* Submit button styling */
+  .submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 1rem;
+  }
+  
+  .submit-button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .submit-button:disabled {
+    background-color: #e5e7eb;
+    cursor: not-allowed;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .mt-4 {
+    margin-top: 1rem;
+  }
+  

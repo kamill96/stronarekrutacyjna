@@ -1,0 +1,224 @@
+/* Ogólny kontener na oferty */
+.job-offers-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Nagłówek rekomendowanych ofert */
+.recommended-offers {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Kontener na oferty pracy */
+.job-offers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Pojedyncza oferta */
+.job-offer {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 250px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.job-offer:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+/* Logo firmy */
+.job-logo .logo-placeholder {
+  width: 100%;
+  height: 100px;
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+/* Szczegóły oferty */
+.job-details {
+  padding-top: 1rem;
+}
+
+.job-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+.company-name,
+.job-location {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Stylowanie dla polecanych ofert */
+.job-featured {
+  color: #ff9800;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Szczegóły wybranej oferty */
+.job-offer-details {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.job-offer-details h3 {
+  font-size: 1.5rem;
+}
+
+.job-offer-details p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.job-offer-details button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.job-offer-details button:hover {
+  background: #0056b3;
+}
+
+/* Sekcja wyszukiwania */
+.search-bar {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.keyword-input,
+.location-input,
+.distance-select,
+.category-select {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  flex: 1;
+}
+
+.keyword-input::placeholder,
+.location-input::placeholder {
+  color: #888;
+}
+
+/* Lista sugerowanych wyników */
+.suggestions {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestions li {
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Przyciski "Szukaj" i "Zaawansowane" */
+.search-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.search-buttons button {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.search-buttons .search-btn {
+  background: #007bff;
+  color: white;
+}
+
+.search-buttons .search-btn:hover {
+  background: #0056b3;
+}
+
+.search-buttons .advanced-btn {
+  background: #0056b3;
+  color: white;
+}
+
+.search-buttons .advanced-btn:hover {
+  background: #003f80;
+}
+
+/* Stylizacja dla filtrów wyszukiwania */
+.search-bar .keyword-input,
+.search-bar .category-select,
+.search-bar .location-input,
+.search-bar .distance-select {
+  max-width: 300px;
+}
+
+.search-bar select {
+  font-size: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Responsywność dla małych ekranów */
+@media (max-width: 768px) {
+  .search-bar {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .keyword-input,
+  .location-input,
+  .distance-select,
+  .category-select {
+      width: 100%;
+  }
+
+  .job-offers {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
