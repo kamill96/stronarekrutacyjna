@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-page-custom-font */
 'use client';
 
 import Link from 'next/link';
@@ -10,6 +11,14 @@ import { AuthContext } from '@/contexts/authContext';
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Strona rekrutacyjna</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet"/>
+      </head>
       <body>
         <AuthProvider>
           <Header />
@@ -24,13 +33,11 @@ function Header() {
   const pathname = usePathname();
   const authContext = useContext(AuthContext);
 
-  const userLoggedIn = authContext?.userLoggedIn ?? false; // Bezpieczne sprawdzenie kontekstu
+  const userLoggedIn = authContext?.userLoggedIn ?? false;
 
   const handleLogout = async () => {
-    try {
-      // Wylogowanie użytkownika
-      // await signOut(auth);
-      window.location.href = '/'; // Przekierowanie po wylogowaniu
+    try {;
+      window.location.href = '/';
     } catch (error) {
       console.error('Błąd wylogowania:', error);
       alert('Nie udało się wylogować.');

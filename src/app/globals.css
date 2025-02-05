@@ -1,13 +1,13 @@
 body {
   margin: rgb(8, 0, 0);
-  font-family: Arial, sans-serif;
+  font-family: Italic;
   background-color: #fbfbfb;
   color: #000000;
   font-size: 25px;
 }
 
 .container {
-  width: 90%; /* Zmniejszona szerokość container */
+  width: 90%;
   max-width: 1500px;
   margin: 0 auto;
 }
@@ -108,12 +108,11 @@ body {
   color: white;
 }
 
-/* NEW STYLES FOR FILTER ROW */
 .filters-row {
   display: flex; /* Użycie flexboxa dla rozmieszczenia w linii poziomej */
   flex-wrap: wrap; /* Jeśli brakuje miejsca, przejdą do nowej linii */
-  gap: 20px; /* Odstęp pomiędzy filtrami */
-  justify-content: flex-start; /* Filtry są wyświetlane od lewej do prawej */
+  gap: 20px; 
+  justify-content: flex-start; 
   margin-top: 20px;
   padding: 10px;
 }

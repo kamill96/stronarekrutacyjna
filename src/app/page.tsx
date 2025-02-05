@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import JobOffers from './job_offers/page';
 import Link from 'next/link';
 import './globals.css';
+import '/fonts/NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght.ttf';
 
 interface FilterOptions {
   [key: string]: string[];
