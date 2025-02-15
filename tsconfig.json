@@ -1,26 +1,26 @@
 {
   "compilerOptions": {
-    "target": "ES2020",                          // Możesz wybrać nowszy standard ES
-    "lib": ["dom", "dom.iterable", "esnext"],     // Obsługuje najnowsze funkcje
-    "allowJs": true,                              // Pozwala na używanie JS razem z TS
-    "skipLibCheck": true,                         // Pomija sprawdzanie typów w bibliotekach
-    "strict": true,                               // Włącza tryb ścisłej weryfikacji
-    "strictNullChecks": true,                     // Wymusza bezpieczniejsze operacje z null/undefined
-    "noEmit": true,                               // Nie generuje plików JS (dla Next.js)
-    "esModuleInterop": true,                      // Obsługuje importy ES6 w CommonJS
-    "module": "esnext",                           // Używa najnowszego systemu modułów
-    "moduleResolution": "bundler",                // Domyślnie Next.js używa bundlera
-    "resolveJsonModule": true,                    // Pozwala na importowanie plików JSON
-    "isolatedModules": true,                      // Zapewnia kompatybilność z Next.js
-    "jsx": "preserve",                            // Zachowuje JSX (Next.js przetwarza JSX)
-    "incremental": true,                          // Umożliwia inkrementalną kompilację
+    "target": "ES2020",                         
+    "lib": ["dom", "dom.iterable", "esnext"],     
+    "allowJs": true,                          
+    "skipLibCheck": true,                     
+    "strict": true,                           
+    "strictNullChecks": true,                  
+    "noEmit": true,                               
+    "esModuleInterop": true,                     
+    "module": "nodenext",                         
+    "moduleResolution": "nodenext",               
+    "resolveJsonModule": true,                
+    "isolatedModules": true,             
+    "jsx": "preserve",                         
+    "incremental": true,                         
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]                          // Alias ścieżek dla folderu src
+      "@/*": ["./src/*"]                        
     }
   },
   "include": [

@@ -1,4 +1,4 @@
-'use client';  // This marks the component as a client-side component
+'use client'; 
 
 import React, { useState } from 'react';
 import JobOffers from './job_offers/page';
@@ -94,7 +94,7 @@ export default function Page() {
 
       <footer className="footer">
         <Link href="/terms">Regulamin</Link>
-        <a href="#">Polityka cookies</a>
+        <Link href="/cookies">Polityka cookies</Link> 
         <a href="#">Praca</a>
       </footer>
     </div>

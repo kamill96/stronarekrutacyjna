@@ -1,0 +1,234 @@
+/* Ogólne style kreatora CV */
+.create-cv-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Sekcja wyboru szablonu */
+.template-selector {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #eef3f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.template-selector h3 {
+  margin-bottom: 10px;
+}
+.template-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.template-tabs button {
+  flex: 1;
+  padding: 8px 0;
+  background-color: #ddd;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.template-tabs button.active {
+  background-color: #0066cc;
+  color: #fff;
+}
+.template-grid {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.template-item {
+  flex: 0 0 120px;
+  padding: 10px;
+  background-color: #fff;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: border 0.3s;
+}
+.template-item:hover,
+.template-item.selected {
+  border-color: #0066cc;
+}
+
+/* Layout formularza i podglądu */
+.create-cv-content {
+  display: flex;
+  gap: 50px;
+  max-width: 1200px;
+  width: 100%;
+}
+.create-cv-form {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+.save-cv-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.save-cv-btn:hover {
+  background-color: #004a99;
+}
+
+/* Podgląd CV */
+.create-cv-preview {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.create-cv-preview h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.cv-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Przykładowe style szablonów darmowych i premium */
+.cv-preview-klasycznyFree {
+  font-family: 'Times New Roman', serif;
+  background: #fdfdfd;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+.cv-preview-nowoczesnyFree {
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #f0f0f0;
+  padding: 25px;
+}
+.cv-preview-minimalistycznyFree {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  padding: 15px;
+}
+.cv-preview-kreatywnyFree {
+  font-family: 'Courier New', monospace;
+  background: #fcfcfc;
+  border: 2px dashed #333;
+  padding: 20px;
+}
+.cv-preview-dynamicznyFree {
+  font-family: 'Roboto', sans-serif;
+  background: #e8f7ff;
+  padding: 25px;
+}
+.cv-preview-konwencjonalnyFree {
+  font-family: Verdana, sans-serif;
+  background: #f9f9f9;
+  border-left: 5px solid #0066cc;
+  padding: 20px;
+}
+.cv-preview-funkcjonalnyFree {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+.cv-preview-przejrzystyFree {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fafafa;
+  padding: 25px;
+}
+
+/* Szablony premium */
+.cv-preview-profesjonalnyPremium {
+  font-family: Georgia, serif;
+  background: #f3f3f3;
+  padding: 25px;
+  border: 1px solid #aaa;
+}
+.cv-preview-executivePremium {
+  font-family: 'Palatino Linotype', serif;
+  background: #e9e9e9;
+  padding: 25px;
+  border-top: 3px solid #0066cc;
+}
+.cv-preview-artystycznyPremium {
+  font-family: 'Courier New', monospace;
+  background: #fcfcfc;
+  padding: 25px;
+  border: 1px dotted #888;
+}
+.cv-preview-innowacyjnyPremium {
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #fff;
+  padding: 30px;
+  border: 2px solid #444;
+}
+.cv-preview-sformalizowanyPremium {
+  font-family: 'Times New Roman', serif;
+  background: #fdfdfd;
+  padding: 25px;
+  border-left: 5px solid #555;
+}
+.cv-preview-zbalansowanyPremium {
+  font-family: 'Garamond', serif;
+  background: #f5f5f5;
+  padding: 25px;
+  border: 1px solid #ddd;
+}
+.cv-preview-inspiracyjnyPremium {
+  font-family: 'Montserrat', sans-serif;
+  background: #eceff1;
+  padding: 25px;
+  border-left: 4px solid #ff4081;
+}
+.cv-preview-nowatorskiPremium {
+  font-family: 'Roboto', sans-serif;
+  background: #e8eaf6;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+/* Styl przycisku płatności */
+.payment-btn {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.payment-btn:hover {
+  background-color: #e65c00;
+}

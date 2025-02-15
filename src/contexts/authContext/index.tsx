@@ -29,21 +29,19 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [userLoggedIn, setUserLoggedInState] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
 
-  // Memoizacja funkcji ustawiającej zalogowanego użytkownika
   const setUserLoggedIn = useCallback((value: boolean) => {
     setUserLoggedInState(value);
   }, []);
 
   useEffect(() => {
-    // Obserwacja stanu autoryzacji użytkownika
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
-      setUserLoggedIn(!!user); // Ustawia stan zalogowania na podstawie użytkownika
-      setLoading(false); // Zakończenie ładowania po sprawdzeniu stanu
+      setUserLoggedIn(!!user); 
+      setLoading(false);
     });
 
-    return () => unsubscribe(); // Czyszczenie obserwacji po unmount
-  }, [setUserLoggedIn]); // Dodanie zależności setUserLoggedIn
+    return () => unsubscribe(); 
+  }, [setUserLoggedIn]); 
 
   return (
     <AuthContext.Provider

@@ -1,8 +1,6 @@
-// auth.ts
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, User } from "firebase/auth";
-import { auth } from './firebase'; // Import auth z pliku firebase.ts
+import { auth } from './firebase'; 
 
-// Funkcja logowania
 export const login = async (email: string, password: string): Promise<User | null> => {
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
@@ -13,7 +11,6 @@ export const login = async (email: string, password: string): Promise<User | nul
   }
 };
 
-// Funkcja rejestracji
 export const register = async (email: string, password: string): Promise<User | null> => {
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
@@ -24,7 +21,6 @@ export const register = async (email: string, password: string): Promise<User | 
   }
 };
 
-// Funkcja wylogowywania
 export const logout = async (): Promise<void> => {
   try {
     await signOut(auth);

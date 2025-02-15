@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '@/firebase/firebase';
-import './employer_page.css'; // Import the CSS file
+import './employer_page.css'; 
 
 export default function EmployerRegistrationPage() {
   const [email, setEmail] = useState('');
@@ -30,14 +30,12 @@ export default function EmployerRegistrationPage() {
       setIsSigningUp(true);
       setErrorMessage('');
       try {
-        // Registration logic with additional info
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const user = userCredential.user;
 
-        // Here you can save additional info to your database if needed
-
-        router.replace('/home'); // Redirect to home page after successful registration
+        
+        router.replace('/home'); 
       } catch (error: unknown) {
         console.error('Registration error:', error);
         setErrorMessage(

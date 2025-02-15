@@ -1,13 +1,11 @@
-/* Full centering of the registration form */
 .registration-container {
-    min-height: 100vh; /* Full height */
+    min-height: 100vh; 
     display: flex;
-    justify-content: center; /* Centering horizontally */
-    align-items: center; /* Centering vertically */
-    background-color: #f3f4f6; /* Background color */
+    justify-content: center; 
+    align-items: center; 
+    background-color: #f3f4f6; 
   }
   
-  /* Registration form styling */
   .registration-form {
     background-color: white;
     padding: 2rem;
@@ -15,11 +13,10 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid #e5e7eb;
     width: 100%;
-    max-width: 400px; /* Max width of the form */
+    max-width: 400px; 
     box-sizing: border-box;
   }
-  
-  /* Title styling */
+ 
   .form-title {
     text-align: center;
     font-size: 2rem;
@@ -28,7 +25,6 @@
     margin-bottom: 1.5rem;
   }
   
-  /* Error message styling */
   .text-red-500 {
     color: #f87171;
     font-size: 0.875rem;
@@ -36,7 +32,6 @@
     margin-bottom: 1rem;
   }
   
-  /* Input styling */
   .form-input {
     padding: 0.75rem 1rem;
     border: 1px solid #d1d5db;
@@ -46,7 +41,6 @@
     margin-bottom: 1rem;
   }
   
-  /* Submit button styling */
   .submit-button {
     width: 100%;
     padding: 0.75rem;
@@ -61,7 +55,7 @@
   }
   
   .submit-button:hover {
-    background-color: #1d4ed8;
+    background-color: #676869;
   }
   
   .submit-button:disabled {

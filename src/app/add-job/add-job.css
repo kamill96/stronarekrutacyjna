@@ -1,0 +1,84 @@
+.add-job-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 8px;
+  color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.job-form {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.job-form div {
+  margin-bottom: 1rem;
+}
+
+.job-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.job-form input,
+.job-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.job-form button {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+}
+
+.job-form button:hover {
+  background-color: #0056b3;
+}
+
+.experience-dropdown {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.custom-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.custom-dropdown select {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 6px; 
+  border: 2px solid #007bff;
+  background-color: rgba(255, 255, 255, 0.3); 
+  color: #fff; 
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; 
+}
+
+.custom-dropdown select:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-color: #0056b3;
+}
+
+.custom-dropdown select:focus {
+  outline: none;
+  border-color: #003d82;
+  box-shadow: 0 0 5px rgba(0, 85, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5); 
+}

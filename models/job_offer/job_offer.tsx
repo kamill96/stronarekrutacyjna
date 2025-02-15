@@ -1,8 +1,6 @@
-// src/models/job_offer/job_offer.ts
+import { ReactNode } from 'react';
 
-import { ReactNode } from "react";
-
-export interface JobOfferData {
+interface JobOfferData {
   id: number;
   position: string;
   company: string;
@@ -10,15 +8,16 @@ export interface JobOfferData {
   location: string;
   logo: string;
   isFeatured: boolean;
-  employmentType?: string; // Opcjonalne pole
-  workTime?: string; // Opcjonalne pole
-  category?: string; // Opcjonalne pole
-  distance?: number; // Opcjonalne pole
-  dateAdded: string; // Data dodania oferty
-}
-
-export interface JobOffersResponse {
-  offers: JobOfferData[];
+  employmentType?: string;
+  workTime?: string;
+  category?: string;
+  distance?: number;
+  description: ReactNode;
+  dateAdded: string;
+  contractType?: string; 
+  workMode?: string;
+  experienceLevel?: string;
+  duties?: string;
 }
 
 export class JobOffer {
@@ -34,7 +33,11 @@ export class JobOffer {
   category?: string;
   distance?: number;
   description: ReactNode;
-  dateAdded: string; // Usuń "!", ponieważ pole jest inicjalizowane w konstruktorze
+  dateAdded: string;
+  contractType?: string; 
+  workMode?: string;
+  experienceLevel?: string;
+  duties?: string; // Dodajemy właściwość dla obowiązków
 
   constructor(data: JobOfferData) {
     this.id = data.id;
@@ -46,9 +49,13 @@ export class JobOffer {
     this.isFeatured = data.isFeatured;
     this.employmentType = data.employmentType;
     this.workTime = data.workTime;
-    this.category = data.category || 'Inne'; // Domyślna kategoria
-    this.distance = data.distance || 10; // Domyślna odległość
-    this.dateAdded = data.dateAdded; // Inicjalizuj dateAdded
+    this.category = data.category || 'Inne'; 
+    this.distance = data.distance || 10; 
+    this.dateAdded = data.dateAdded;
+    this.contractType = data.contractType; 
+    this.workMode = data.workMode; 
+    this.experienceLevel = data.experienceLevel;
+    this.duties = data.duties;  // Dodajemy obowiązki
   }
 
   static fromJSON(data: JobOfferData): JobOffer {

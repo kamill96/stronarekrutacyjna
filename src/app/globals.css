@@ -1,9 +1,11 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
 body {
-  margin: rgb(8, 0, 0);
-  font-family: Italic;
-  background-color: #fbfbfb;
-  color: #000000;
-  font-size: 25px;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #333; /* Tło na ciemne */
+  color: #0c0707; /* Kolor tekstu na biały */
+  font-size: 16px;
 }
 
 .container {
@@ -13,26 +15,45 @@ body {
 }
 
 .header {
+  background-color: #333; /* Czarny tło */
+  color: white;
+  padding: 20px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  background-color: #ffffff00;
-  color: rgba(0, 0, 0, 0.986);
+  width: 100%;
 }
 
 .add-job-btn {
-  background-color: #3d4246;
-  color: white;
+  color: #bdbaba;
   border: none;
   padding: 10px 15px;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 25px;
+}
+
+.add-job-btn:hover {
+  text-decoration: underline; 
 }
 
 .user-controls {
   display: flex;
   gap: 10px;
+}
+
+.form-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
 }
 
 .search-bar {
@@ -93,7 +114,7 @@ body {
 
 .main-content {
   padding: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(69, 8, 8, 0.1);
   margin: 20px 0;
@@ -104,24 +125,24 @@ body {
   display: flex;
   justify-content: space-evenly;
   padding: 10px 0;
-  background-color: #0066cc;
-  color: white;
+  /* background-color: #0066cc; */
+  color: #bdbaba;
 }
 
 .filters-row {
-  display: flex; /* Użycie flexboxa dla rozmieszczenia w linii poziomej */
-  flex-wrap: wrap; /* Jeśli brakuje miejsca, przejdą do nowej linii */
-  gap: 20px; 
-  justify-content: flex-start; 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
   margin-top: 20px;
   padding: 10px;
 }
 
 .filter-dropdown {
-  width: 18%; /* Określamy szerokość każdego filtra */
+  width: 18%;
   border: 1px solid #ccc;
   padding: 10px;
-  box-sizing: border-box; /* Zapewnia, że padding nie wpływa na szerokość elementu */
+  box-sizing: border-box;
 }
 
 .filter-button {
@@ -143,4 +164,70 @@ body {
 
 .dropdown-item {
   margin-bottom: 10px;
+}
+
+.login-btn {
+  color: #bdbaba;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.login-btn:hover {
+  text-decoration: underline;
+}
+
+.job-offer-details {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #333;  
+  padding: 20px;
+  /* background-color: #ffffff; */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.job-offer-details p {
+  margin: 8px 0; 
+  color: #333; 
+}
+
+.job-offer-details .contract-type,
+.job-offer-details .work-mode,
+.job-offer-details .experience-level {
+  font-weight: normal;
+  color: #333; 
+}
+
+.job-offer-details .job-featured {
+  font-weight: bold;
+  color: #4A90E2; 
+}
+
+.job-offer-details button {
+  /* background-color: #357ab7; */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.job-offer-details button:hover {
+  /* background-color: #005bb5;  */
+  text-decoration: underline; 
+}
+
+.upload-cv-btn {
+  margin-left: 140px;
+  color: #bdbaba;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 25px;
+}
+.upload-cv-btn:hover {
+  text-decoration: underline;
 }

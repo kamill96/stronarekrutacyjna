@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import './EmployeeProfile.css'; // Import the CSS file
+import './EmployeeProfile.css'; 
 
 export default function EmployeeProfilePage() {
-  const [userID, setUserID] = useState(''); // Automatically generated user ID
+  const [userID, setUserID] = useState('');
   const [userName, setUserName] = useState('');
   const [lastName, setLastName] = useState('');
   const [firstName, setFirstName] = useState('');
@@ -18,11 +18,9 @@ export default function EmployeeProfilePage() {
   const router = useRouter();
 
   useEffect(() => {
-    // Assuming session storage has userEmail set during registration
     const userEmail = sessionStorage.getItem('userEmail');
     if (userEmail) {
       setEmail(userEmail);
-      // Generate a userID (pseudo example)
       const generatedUserID = `user-${Date.now()}`;
       setUserID(generatedUserID);
     }
@@ -30,11 +28,9 @@ export default function EmployeeProfilePage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Add logic to save the user profile data
     console.log('Dane użytkownika zapisane:', {
       userID, userName, lastName, firstName, phone, email, education, skills, city, history,
     });
-    // Redirect to another page or show a success message
     router.push('/');
   };
 
@@ -50,7 +46,7 @@ export default function EmployeeProfilePage() {
                 className="form-input"
                 placeholder="ID użytkownika"
                 value={userID}
-                readOnly // Input for the user ID should be read-only
+                readOnly 
               />
             </div>
             <div>
@@ -101,7 +97,7 @@ export default function EmployeeProfilePage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                readOnly // Input for email should be read-only as it is fetched from session storage
+                readOnly 
               />
             </div>
             <div>

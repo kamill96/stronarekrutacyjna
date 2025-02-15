@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '@/firebase/firebase';
-import './registration_page.css'; // Import stylów
+import './registration_page.css';
 
 export default function RegistrationPage() {
   const [email, setEmail] = useState('');
@@ -28,7 +28,6 @@ export default function RegistrationPage() {
       setErrorMessage('');
       try {
         await createUserWithEmailAndPassword(auth, email, password);
-        // Przekierowanie na stronę główną
         router.push('/job_offers'); 
       } catch (error: unknown) {
         console.error('Błąd rejestracji:', error);
@@ -96,7 +95,7 @@ export default function RegistrationPage() {
           <p>
             Masz już konto?{' '}
             <Link 
-              href="/auth/login_page" // Link do strony logowania
+              href="/auth/login_page" 
               className="font-medium text-blue-600 hover:text-blue-500"
             >
               Zaloguj się

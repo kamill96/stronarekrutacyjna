@@ -1,18 +1,16 @@
-// src/app/home/page.tsx
-
 'use client';
 
 import { useRouter } from 'next/navigation';
 import { signOut } from 'firebase/auth';
-import { auth } from '@/firebase/firebase';  // Upewnij się, że importujesz instancję auth
+import { auth } from '@/firebase/firebase'; 
 
 export default function HomePage() {
   const router = useRouter();
 
   const handleLogout = async () => {
     try {
-      await signOut(auth); // Wylogowanie z Firebase
-      router.push('/'); // Przekierowanie na stronę główną (np. login page)
+      await signOut(auth); 
+      router.push('/'); 
     } catch (error) {
       console.error('Błąd wylogowania: ', error);
     }
@@ -24,9 +22,7 @@ export default function HomePage() {
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
           Witaj na stronie głównej
         </h2>
-        
-        {/* Inne elementy strony */}
-        
+      
         <div className="text-center mt-4">
           <button
             onClick={handleLogout}
